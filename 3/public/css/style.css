@@ -1,0 +1,179 @@
+html,
+body {
+    height: 100vh;
+}
+
+/* disable selection */
+* {
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+#navbarHeader,
+footer {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.album {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.album > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.buttons button {
+    line-height: 1;
+    margin-top: 0.5rem;
+}
+
+.jumbotron {
+    padding: 1rem;
+    margin-bottom: 0;
+    background: rgba(255,255,255,0.8);
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+.album {
+    position: relative;
+    padding: 1rem 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+footer {
+    padding: 0;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+/* tree */
+#tree_wrap .tree {
+    padding-left: 2rem;
+}
+
+#tree_wrap > .tree {
+    padding: 0;
+}
+
+#tree_wrap li {
+    -ms-user-select: auto;
+    -moz-user-select: auto;
+    -khtml-user-select: auto;
+    -webkit-user-select: auto;
+    user-select: auto;
+    list-style: none;
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    margin: 0.5rem 0;
+    min-height: 2rem;
+    height: auto;
+    display: block;
+    text-align: left;
+    text-decoration: underline;
+    position: relative;
+}
+
+#tree_wrap li:hover {
+    cursor: move;
+    background-color: rgba(0,125,125,0.05);
+}
+
+#tree_wrap li.active {
+    background-color: rgba(0,255,255,0.3);
+}
+
+#tree_wrap li.ui-sortable-placeholder {
+    background-color: rgba(255,255,0,0.3);
+}
+
+#tree_wrap input[type="text"] {
+    padding: 0 2rem 0 0.5rem;
+    font-size: 1rem;
+    margin: 0;
+    outline: none;
+    border: 0;
+    width: auto;
+    line-height: 1;
+}
+
+#tree_wrap input[type="text"] + i.fa {
+    color: #5cb85c;
+    margin-left: -1rem;
+    font-size: 0.9rem;
+    cursor: default;
+}
+
+#tree_wrap #del_node {
+    position: absolute;
+    right: 1rem;
+    top: 0.25rem;
+    color: rgba(250,0,0,0.8);
+    cursor: default;
+}
+
+#tree_wrap .toggle-branch {
+    margin-right: 0.5rem;
+    cursor: default;
+    transition: 0.4s all ease;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.25rem;
+}
+
+#tree_wrap .toggle-branch .fa {
+    transition: 0.4s all ease-out;
+}
+
+#tree_wrap .toggle-branch.closed .fa {
+    transform: rotate(180deg);
+}
+
+.drop-active {
+    border: 1px dashed #5cb85c;
+}
+
+.drop-active .tree:empty {
+    margin: 0.5rem 0 0.5rem 2rem;;
+    height: 2rem;
+    border: 1px dashed #5cb85c;
+}
